@@ -1,0 +1,30 @@
+<!-- <p>products works!</p> -->
+
+
+<div class="row">
+    <div class="col-md-4">
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let prod of productInfo"
+            [routerLink]="['/products',prod.pId]"
+            [class.active]="prod.pId === selectedProdId">
+                {{prod.pName}}
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-8">
+        <!-- <app-product></app-product> -->
+
+        <button class="btn btn-primary my-2" (click)="onUserClick()">Go to Users</button>
+        <div class="mx-2">
+        <a routerLink="/users" class="btn btn-primary">Go To users using templating</a>
+    </div>
+    </div>
+</div>
+
+<!-- Routing has two path >> 
+        currentUrl >> http://localhost:4200/products
+        baseUrl    >> http://localhost:4200
+
+        Absolute   >> When we use '/'  >> baseUrl/users, http://localhost:4200/users
+
+        Relative   >> When we don't use '/'  >>  currentUrl/users   >>  http://localhost:4200/products/users -->

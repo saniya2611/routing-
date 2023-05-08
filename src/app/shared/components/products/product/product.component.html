@@ -1,0 +1,20 @@
+
+<mat-card>
+    <mat-card-content>
+        <h1>
+            <strong>{{getSingleProd.pName}}</strong>
+        </h1>
+
+    <hr>
+    
+        <p>
+            The product is <strong>{{getSingleProd.pName}}</strong> And its status is <strong>{{getSingleProd.pStatus}}</strong>
+        </p>
+<!-- 
+        <button class="btn btn-primary btn-lg" 
+        [routerLink]="['/products',getSingleProd.pId, 'edit']">Edit-Product</button> -->
+       
+     <button mat-raised-button color="primary"
+            [routerLink]="['/products',getSingleProd.pId, 'edit']">Edit-Product</button>
+   <mat-card-content>
+

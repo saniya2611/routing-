@@ -1,0 +1,15 @@
+<!-- <p>user works!</p> -->
+<div class="row">
+    <div class="col-sm-6 offset-col-sm-3 text-center">
+        <div class="alert alert-primary">
+            <p>
+                This users name is <strong>{{getSingleUser.userName}}</strong> and its userid is <strong>{{getSingleUser.id}}</strong> ...
+            </p>
+        </div>
+        
+        <div class="text-right">
+            <button class="btn btn-primary btn-lg"
+            [routerLink]="['/users',getSingleUser.id,'edit']">Edit</button>
+        </div>
+    </div>
+</div>
